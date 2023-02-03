@@ -27,33 +27,6 @@
         0.125em 0.125 0.25em rgba(0,0,0,.15);
 }
 
-.section__title {
-margin-bottom: .25em;
-}
-
-.section__title--intro{
-  font-weight: var(--fw-reg);
-  color: var(--clr-dark);
-}
-
-.section__title--intro strong {
-display: block;
-}
-
-.section__subtitle{
-  margin: 0;
-  font-size: var(--fs-h3);
-}
-
-.section__subtitle--intro,
-.section__subtitle--about {
-  background: var(--clr-accent);
-  padding: .25em 1em;
-  font-family: var(--ff-secondary);
-  margin-bottom: 1em;
-  color: var(--clr-dark);
-}
-
 /* header */
 
 nav { display: none;} 
@@ -160,6 +133,60 @@ nav { display: none;}
   }
 }
 
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: var(--clr-dark);
+}
+
+.about-me__img {
+  box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas: 
+      "title img"
+      "subtitle img"
+      "text img";
+    grid-column-gap: 2em;
+  }
+
+.section__title--about {
+  grid-area: title;
+}
+
+.section__subtitle--about {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  position: relative;
+  left: -1em;
+  width: calc(100% + 2em);
+  padding-left: 1em;
+  padding-right:calc(200px + 2em);
+}
+
+  .about-me__img {
+    grid-area: img;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/** My Work */
+
+.my-work {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center; 
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax (300px, 1fr));
+}
 
 /* General Styles */
 
@@ -217,3 +244,36 @@ h3 {
 h1 {  font-size: var(--fs-h1)}
 h2 {  font-size: var(--fs-h2)}
 h3 {  font-size: var(--fs-h3)}
+
+.section__title {
+  margin-bottom: .25em;
+  }
+  
+  .section__title--intro{
+    font-weight: var(--fw-reg);
+    color: var(--clr-dark);
+  }
+  
+  .section__title--intro strong {
+  display: block;
+  }
+  
+  .section__subtitle{
+    margin: 0;
+    font-size: var(--fs-h3);
+  }
+  
+  .section__subtitle--intro,
+  .section__subtitle--about {
+    background: var(--clr-accent);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+    color: var(--clr-dark);
+  }
+
+.section__subtitle--work {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 1em;
+}
