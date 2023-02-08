@@ -21,7 +21,7 @@ Feel free to just browse through the site and enjoy what you see regarding my ex
 No installation is required
 
 ## Usage
-Just look and enjoy what you see
+Just look and enjoy what you see. To change colors, all you have to do is change some things in the root section of the css file and it should apply to all the things that was linked to it. 
 
 ## Contributing
 Jack Rattanasith, freeCodeCamp
