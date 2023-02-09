@@ -331,7 +331,7 @@ header{
 }
 
 .footer ul li{
-  display: inline-block;
+  display: inline-flex;
 }
 
 .footer a{ color: inherit}
@@ -347,6 +347,11 @@ header{
 
 #email{
   margin-left: 45px;
+}
+
+.footer ul li a i{
+  font-size: xx-large;
+  margin-left: 15px;
 }
 
 /* General Styles */
@@ -456,4 +461,24 @@ h3 {  font-size: var(--fs-h3)}
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Contact Me styles */
+
+@media (min-width: 600px){
+  .feedback-class{
+    display: grid;
+  }
+}
+
+.feedback-area{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feedback-request{
+  color: var(--clr-dark);
+  text-align: center;
+  padding-bottom: 10px;
 }
